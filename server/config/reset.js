@@ -1,0 +1,1 @@
+// TODO: create the tables to store the events and locations data for web app
