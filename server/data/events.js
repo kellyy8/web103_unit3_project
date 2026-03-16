@@ -105,7 +105,7 @@ const events = [
     },
     {
         id: 11,
-        title: "Open Mic Night for New SF Arrivals",
+        title: "Open Mic Night",
         start_at: "2026-05-08T19:00:00-07:00",
         image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
         address: "777 Valencia St",
