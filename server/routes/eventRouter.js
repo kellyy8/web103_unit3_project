@@ -1,7 +1,14 @@
 import express from 'express'
-// TODO: import controllers for events and locations
+import {
+    getAllEvents,
+    getEventsByLocation,
+    getEventById
+} from '../controllers/eventController.js'
 
 const router = express.Router()
-// TODO: define routes to get all events and locations
+
+router.get('/', getAllEvents)
+router.get('/by-location', getEventsByLocation)
+router.get('/:id', getEventById)
 
 export default router
