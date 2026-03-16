@@ -2,10 +2,10 @@ import express from 'express'
 import path from 'path'
 import favicon from 'serve-favicon'
 import dotenv from 'dotenv'
-import eventRouter from './routes/eventRouter'
-import locationRouter from './routes/locationRouter'
+import eventRouter from './routes/eventRouter.js'
+import locationRouter from './routes/locationRouter.js'
 
-dotenv.config()
+dotenv.config({ path: '../.env' })
 
 const PORT = process.env.PORT || 3000
 

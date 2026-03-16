@@ -2,17 +2,18 @@
   "name": "unitygridplaza",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"cd client && vite\" \"cd server && nodemon server\"",
-    "start": "cd server && node server",
-    "build": "cd client && vite build"
+    "dev": "npm run reset && concurrently \"cd client && vite\" \"cd server && nodemon server.js\"",
+    "start": "npm run reset && cd server && node server.js",
+    "build": "cd client && vite build",
+    "reset": "cd server && node config/reset.js"
   },
   "dependencies": {
     "@picocss/pico": "^1.5.7",
     "concurrently": "^7.6.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.6.1",
     "express": "^4.18.2",
     "nodemon": "^3.1.14",
-    "pg": "^8.10.0",
+    "pg": "^8.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
