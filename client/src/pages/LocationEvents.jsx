@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import LocationAPI from '../services/LocationAPI'
 import Event from '../components/Event'
 import '../css/LocationEvents.css'
 
 const LocationEvents = ({index}) => {
     const [location, setLocation] = useState([])
     const [events, setEvents] = useState([])
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const locationData = await LocationAPI.getLocationById(index)
+                setLocation(locationData)
+            }
+            catch (error) {
+                throw error
+            }
+        }) ()
+    }, [])
 
     return (
         <div className='location-events'>
