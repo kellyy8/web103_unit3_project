@@ -2,7 +2,7 @@ import React from 'react'
 import { useRoutes, Link } from 'react-router-dom'
 import Locations from './pages/Locations'
 import LocationEvents from './pages/LocationEvents'
-import Event from './components/Event'
+import Events from './pages/Events'
 import './App.css'
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
     },
     {
       path: '/events',
-      element: <Event />
+      element: <Events />
     }
   ])
 

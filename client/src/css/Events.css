@@ -1,0 +1,65 @@
+.events-page {
+    width: 100%;
+    padding: 0 2rem 3rem;
+}
+
+.events-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    margin: 0 2rem 2rem;
+    padding: 1.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.events-toolbar-copy h2,
+.events-toolbar-copy p {
+    margin: 0;
+}
+
+.events-toolbar-copy p {
+    margin-top: 0.5rem;
+    color: #f4f4f4;
+}
+
+.events-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.events-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    min-width: 220px;
+}
+
+.events-control span {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.events-control select {
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111;
+}
+
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.events-status {
+    margin: 2rem;
+    padding: 1rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+    text-align: center;
+}

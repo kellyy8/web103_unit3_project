@@ -5,8 +5,8 @@ import '../css/Event.css'
 const Event = (props) => {
 
     // const [props, setEvent] = useState([])
-    const [time, setTime] = useState([])
-    const [remaining, setRemaining] = useState([])
+    const [time, setTime] = useState('')
+    const [remaining, setRemaining] = useState('')
 
     // useEffect(() => {
     //     (async () => {
@@ -21,29 +21,21 @@ const Event = (props) => {
     // }, [])
 
     useEffect(() => {
-        (async () => {
-            try {
-                const result = dates.formatTime(props.start_at)
-                setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [props])
+        if (!props.start_at) {
+            return
+        }
+        const result = dates.formatTime(props.start_at)
+        setTime(result)
+    }, [props.start_at])
 
     useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = dates.formatRemainingTime(props.start_at)
-                setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, props.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [props])
+        if (!props.start_at) {
+            return
+        }
+        const timeRemaining = dates.formatRemainingTime(props.start_at)
+        setRemaining(timeRemaining)
+        dates.formatNegativeTimeRemaining(timeRemaining, props.id)
+    }, [props.id, props.start_at])
 
     return (
         <article className='event-information'>

@@ -3,7 +3,7 @@ import pool from '../config/database.js'
 // GET /locations - return all locations
 export const getAllLocations = async (_, res) => {
     try {
-        const query = 'SELECT name FROM locations'
+        const query = 'SELECT * FROM locations'
         const result = await pool.query(query)
         if (result.rows.length === 0) {
             return res.status(404).json({ error: 'No locations found.' })
